@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+{% block style %}
+<link rel="stylesheet" href="/static/css/home_style.css">
+<link rel="stylesheet" href="/static/css/responsive.css">
+{% endblock style %}
+{% block homeActive %}active{% endblock homeActive %}
+
+{% block body %}
+{% load static %}
+<div class="main_img">
+    <div class="content">
+
+        <h1>We help in your study</h1>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil commodi, velit
+            temporibus illum cumque eveniet voluptatibus corporis unde suscipit itaque.
+        </p>
+        <button class="btn">Learn More</button>
+    </div>
+</div>
+<div class="category">
+    <h1>category</h1>
+</div>
+<div class="category-container">
+    <div class="category_items">
+        <div class="category_img">
+            <img src="static/images/pyton.png" alt="python image">
+        </div>
+        <div class="category-name">
+            <h1>Python</h1>
+        </div>
+    </div>
+    <div class="category_items">
+        <div class="category_img">
+            <img src="static/images/c++.png" alt="c++ image">
+        </div>
+        <div class="category-name">
+            <h1>C++</h1>
+        </div>
+    </div>
+    <div class="category_items">
+        <div class="category_img">
+            <img src="static/images/c.png" alt="C image">
+        </div>
+        <div class="category-name">
+            <h1>C</h1>
+        </div>
+    </div>
+    <div class="category_items">
+        <div class="category_img">
+            <img src="static/images/java.jpeg" alt="java image">
+        </div>
+        <div class="category-name">
+            <h1>Java</h1>
+        </div>
+    </div>
+</div>
+<div class="cards">
+    <div class="cards_container">
+        <div class="main-card">
+            <img src="static/images/vecteezy_medical-technology-network-team-meeting-concept-doctor-hand__737.jpg" alt="avatar">
+
+            <div class="card-content">
+                <h3>Demo Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque? Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="card-btn">
+                <button class="btn_card">Start reading</button>
+            </div>
+        </div>
+        <div class="main-card">
+            <img src="static/images/vecteezy_medical-technology-network-team-meeting-concept-doctor-hand__737.jpg"
+                alt="avatar">
+
+            <div class="card-content">
+                <h3>Demo Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque? Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="card-btn">
+                <button class="btn_card">Start reading</button>
+            </div>
+        </div>
+        <div class="main-card">
+            <img src="static/images/vecteezy_medical-technology-network-team-meeting-concept-doctor-hand__737.jpg" alt="avatar">
+
+            <div class="card-content">
+                <h3>Demo Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque? Lorem ipsum dolor sit amet.</p>
+            </div>
+            <div class="card-btn">
+                <button class="btn_card">Start reading</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
