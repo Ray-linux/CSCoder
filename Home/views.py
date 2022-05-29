@@ -45,3 +45,6 @@ def search(request):
 
 def login(request):
     return render(request, 'home/login.html')
+
+def signup(request):
+    return render(request, 'home/sign_up.html')
