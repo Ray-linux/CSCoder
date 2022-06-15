@@ -5,6 +5,7 @@ from django.db import models
 class Post(models.Model):
     sno = models.AutoField(primary_key=True)
     title = models.CharField(max_length=225)
+    thumbnail = models.ImageField(upload_to="thumbnails/", max_length=250, null=True, default=None)
     content = models.TextField()
     author = models.CharField(max_length=13)
     slug = models.CharField(max_length=50)

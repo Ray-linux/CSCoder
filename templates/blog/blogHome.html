@@ -1,28 +1,26 @@
-{% extends 'base.html' %}
-
-{% block title %}Blog Home{% endblock title %}
-
+{% extends 'base.html' %} 
+{% block title %}Blog Home{% endblock title %} 
 {% block style %}
-<link rel="stylesheet" href="/static/css/blog_home.css">
-<link rel="stylesheet" href="/static/css/responsive_blog_home.css">
-{% endblock style %}
-
+<link rel="stylesheet" href="/static/css/blog_home.css" />
+<link rel="stylesheet" href="/static/css/responsive_blog_home.css" />
+{% endblock style %} 
 {% block body %}
 
 <h1 id="Cs_coder_blog">Cs Coder Blogs</h1>
 
 {% for post in allPosts %}
 
-    <div class="main_left">
-      <div class="main_left_container">
-          <img class="main_left_container_img" src="/static/images/img_avatar.png" alt="img">
-          <div class="main_left_container_content">
-            <h1><a href="/blog/{{post.slug}}">{{post.title}}</a></h1>
-            <p>{{post.content | truncatechars:100}}</p>
-            <br>
-            <b><p id="time_Stamp">{{post.timeStamp}} by {{post.author}}</p></b>
-          </div>
-      </div>
+<div class="main_left">
+  <div class="main_left_container">
+    <img
+      class="main_left_container_img" src="/media/{{post.thumbnail}}" alt="img"/>
+    <div class="main_left_container_content">
+      <h1><a href="/blog/{{post.slug}}">{{post.title}}</a></h1>
+      <p>{{post.content | truncatechars:100}}</p>
+      <br />
+      <b><p id="time_Stamp">{{post.timeStamp}} by {{post.author}}</p></b>
     </div>
-    {% endfor %}
+  </div>
+</div>
+{% endfor %}
 {% endblock body %}
