@@ -1,0 +1,31 @@
+@media screen and (min-width:695px) and (max-width: 980px) {
+    .main_left_container_img{
+        display: none;
+    }
+
+    .main_left_container_content{
+        margin-left: 20px;
+    }
+
+    .main_left_container_content h1{
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 694px) {
+    .main_left_container_img{
+        display: none;
+    }
+    .main_left_container_content{
+        margin-left: 20px;
+    }
+    .main_left_container_content h1{
+        font-size: 28px;
+    }
+    .main_left_container_content p{
+        font-size: 15px;
+    }
+    .main_left_container{
+        height: auto;
+    }
+}
