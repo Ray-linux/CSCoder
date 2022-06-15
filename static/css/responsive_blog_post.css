@@ -1,0 +1,17 @@
+@media screen and (min-width: 820px) and (max-width: 1210px) {
+    .blog_post_container{
+        margin: 0 200px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 819px) {
+    .blog_post_container{
+        margin: 0 100px;
+    }
+}
+
+@media screen  and (max-width: 499px) {
+    .blog_post_container{
+        margin: 0 30px;
+    }
+}

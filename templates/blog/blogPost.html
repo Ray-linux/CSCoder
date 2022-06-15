@@ -1,9 +1,30 @@
 {% extends 'base.html' %}
 
 {% block title %}Blog Post{% endblock title %}
+{% block style %}
+<link rel="stylesheet" href="/static/css/blog_post.css">
+<link rel="stylesheet" href="/static/css/responsive_blog_post.css">
+{% endblock style %}
 
 {% block body %}
-<div class="container my-3">
+<div class="blog_post_container my-3">
     {{post.content}}
+    <div class="box">
+      <div class="uper_box">
+          <button type="button" onclick="copyEvent('copy')">Copy</button>
+      </div>
+      <code id="copy">
+        Hello World
+      </code>
+  </div>
 </div>
+
+
+<script>
+  function copyEvent(id) {
+      var str = document.getElementById(id);
+      window.getSelection().selectAllChildren(str);
+      document.execCommand("Copy")
+  }
+</script>
 {% endblock body %}
