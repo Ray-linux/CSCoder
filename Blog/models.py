@@ -9,7 +9,7 @@ class Post(models.Model):
     title = models.CharField(max_length=225)
     thumbnail = models.ImageField(upload_to="thumbnails/", max_length=250, null=True, default=None)
     content = models.TextField()
-    # content = RichTextField(blank=True, null= True)
+    source_code = models.TextField()
     author = models.CharField(max_length=13)
     slug = models.CharField(max_length=50)
     timeStamp = models.DateTimeField(blank=True)
