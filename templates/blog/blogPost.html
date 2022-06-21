@@ -9,13 +9,12 @@
 {% block body %}
 <div class="blog_post_container my-3">
     {{post.content|safe}}
-    <div class="box">
-      <div class="uper_box">
-          <button type="button" onclick="copyEvent('copy')">Copy</button>
+ <div class="box">
+      <div class="uper_box"> 
+      <button type="button" onclick="copyEvent('copy')">Copy</button> 
       </div>
-      <code id="copy">
-        Hello World
-      </code>
+      <pre class="mycode" id="copy">{{post.source_code}}
+      </pre>
   </div>
 </div>
 

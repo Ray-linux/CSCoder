@@ -1,9 +1,13 @@
 {% extends 'base.html' %}
 
 {% block title %}Search results{% endblock title %}
+{% block style %}
+<link rel="stylesheet" href="/static/css/blog_home.css" />
+<link rel="stylesheet" href="/static/css/responsive_blog_home.css" />
+{% endblock style %} 
 
 {% block body %}
-<div class="container">
+<div class="main_left">
 <h1>Search results</h1>
 {% if allPosts|length < 1 %}
 <p>No serach search results</p>
@@ -26,19 +30,19 @@ Make sure that all words are spelled correctly.
 
 {% endif %}
 {% for post in allPosts %}
-<div class="container my-3">
-    <div class="card">
-        <div class="card-header">
-          Article by {{post.author}}
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">{{post.title}}</h5>
-          <p class="card-text">{{post.content | truncatechars:100}}</p>
-          <p>{{post.timeStamp}}</p>
-          <a href="/blog/{{post.slug}}" class="btn btn-primary">Continune reading</a>
-        </div>
-      </div>
+{% comment %} ------------------------------------------ {% endcomment %}
+<div class="main_left">
+  <div class="main_left_container">
+    <img
+      class="main_left_container_img" src="/media/{{post.thumbnail}}" alt="img"/>
+    <div class="main_left_container_content">
+      <h1><a href="/blog/{{post.slug}}">{{post.title}}</a></h1>
+      <p>{{post.content |safe | truncatechars:100}}</p>
+      <br />
+      <b><p id="time_Stamp">{{post.timeStamp}} by {{post.author}}</p></b>
     </div>
+  </div>
+</div>
 {% endfor %}
 </div>
 {% endblock body %}

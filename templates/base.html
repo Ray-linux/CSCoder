@@ -20,8 +20,10 @@
               <li class="nav-item"><strong><a href="/login" class="nav-link">Login</a></strong></li>
 
               <div class="search-box">
-                  <input type="text" name="" placeholder="Search" id="search-box" name="path">
+                <form method="get" action="/search">
+                  <input type="text" name="query" placeholder="Search" id="search-box" name="path">
                   <button type="submit" class="searchbutton">Search
+                  </form>
                   </button>
               </div>
           </ul>
