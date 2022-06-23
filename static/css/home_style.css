@@ -65,7 +65,7 @@
 }
 .main-card{
   width: 395px;
-  height: 483px;
+  height: auto;
   margin: 15px;
   border-radius: 15px;
   box-shadow: 0 16px 45px 0 #555353;

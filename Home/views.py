@@ -86,7 +86,7 @@ def handleLogin(request):
         email = request.POST['email']
         password = request.POST['password']
         
-        user = authenticate(request, email=email, password=password)
+        user = authenticate(request, email_address=email, password=password)
         if user is not None:
             auth_login(request, user)
             messages.success(request, "successfully logged in")
